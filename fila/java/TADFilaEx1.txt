@@ -1,0 +1,46 @@
+import java.util.LinkedList;
+import java.util.Queue;
+import java.util.Stack;
+public class Ex1Fila {
+	public static void main(String[] args) {
+		Queue<String> fila1 = new LinkedList<String>();
+		fila1.add("Ceara");
+		fila1.add("Fortaleza");
+		fila1.add("Floresta");
+		fila1.add("Ferroviario");
+		System.out.println(fila1 + "\n\n");
+		for(int i = 0; i < fila1.size()-1; i++) {
+			fila1.add(fila1.poll());
+		}
+		System.out.println(fila1);
+		
+		// usando apenas fila elimine o elemento da cauda (Final da Fila). poll() elimina da frente
+		removerCauda(fila1);
+		invertaFilaUsandoPilha(fila1);
+		imprimirFilaAoContrario(fila1);
+		inverterFilaUsandoApenasFila(fila1);
+//		
+		String time = fila1.poll(); // desenfileirar
+//		System.out.println(fila1.peek());
+//		System.out.println("time: " + time);
+//		System.out.println(fila1.size());
+//		System.out.println(fila1.isEmpty());
+	}
+
+	// Só para imprimir fila ao contrário
+	private static void imprimirFilaAoContrario(Queue<String> fila1) {
+	}
+
+	private static void inverterFilaUsandoApenasFila(Queue<String> fila1) {
+		Queue<String> filaAux = new LinkedList<String>();
+	}
+
+	private static void invertaFilaUsandoPilha(Queue<String> fila1) {
+		Stack<String> pilha = new Stack<String>();
+	}
+
+	private static void removerCauda(Queue<String> fila1) {
+	
+	}
+}
+
